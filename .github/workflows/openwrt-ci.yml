@@ -50,8 +50,10 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-#        run: make defconfig
-        run: make
+
+        cp custom_config .config  # 使用你的自定义配置文件
+        run: make defconfig
+
         
       - name: Download packages
         run: make download -j16
