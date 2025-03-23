@@ -51,7 +51,7 @@ jobs:
 
       - name: Generate configuration file
         run: |
-          cp ./custom_config .config
+          cp custom_config .config
           make defconfig
 
         
